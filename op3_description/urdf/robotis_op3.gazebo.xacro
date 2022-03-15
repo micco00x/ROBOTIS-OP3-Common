@@ -5,6 +5,14 @@
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
       <robotNamespace>/robotis_op3</robotNamespace>
     </plugin>
+
+    <plugin name="robotis_op3_groundtruth_sim" filename="libgazebo_ros_p3d.so">
+      <frameName>map</frameName>
+      <bodyName>body_link</bodyName>
+      <topicName>/robotis_op3/ground_truth</topicName>
+      <updateRate>125.0</updateRate>
+      <gaussianNoise>0.0</gaussianNoise>
+    </plugin>
   </gazebo>
 
   <!-- body link -->
